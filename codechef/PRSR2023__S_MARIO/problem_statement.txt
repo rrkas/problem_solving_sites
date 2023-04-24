@@ -1,0 +1,44 @@
+Problem
+You are playing a game called Mario and your task is to save the princess.
+The game is represented as a 2D grid of dimensions h x n, where h is the height of the grid and n is the length of the grid (grid is placed vertically). The grid consists of two characters ‘ . ’ and ‘ * ’.
+Where ' . ' represents a free space and ' * ' represents a block. You cannot pass through a position having a block.
+In free space you are either falling down or standing. You can only stand on top of a block (that is your position is in free space and just below a block is present). If just below a block is not present you keep falling down until just below a block is encountered. If a block never comes and you exit the grid, you die. Also if you exit the grid from anywhere (up, down, left or right) you die.
+While standing you can move left or right by 1 step (i.e from (i, j) to (i, j+1) or (i, j-1)).
+While standing you can also make jumps of height 1 and 2 and then move left or right by 1 step (i.e move up by 1 step and then move left or right by 1 step or move up by 2 steps and then move left or right by 1 step). Note: For all these moves/jumps you cannot pass through a block.
+E.g. if just above you a block is present then you cannot make jumps. If 2 steps above you a block is present then you can make jumps of height 1 but not 2.
+You are initially at cell (h-1,1) and you have to reach cell (h-1,n) to save the princess.
+If you can reach cell (h-1,n) print “Princess Saved” else print “Princess Died”.
+Note : Cells (h-1,1) and (h-1,n) will always be free space and cells (h,1) and (h,n) will always be block.
+Refer sample testcase explanation for better understanding
+
+
+
+Input Format
+First line contains 2 integers h, n.
+Next h lines contains strings of length n consisting of ‘ * ’ and ‘ . ’ only.
+
+
+
+Output Format
+Output single line containing “Princess Saved” or “Princess Died”.
+Note : Do not change the case of output string.
+
+
+
+Constraints
+2 <= h <= 10 5 2 <= n <= 10 5 h * n <= 10 6
+
+
+
+Sample 1:
+Input Output 8 12 ............ ....****..*. .........*.. ...**...*... ............ ....**...... ........*... ****..***.** Princess Saved
+
+
+
+Explanation:
+.
+
+
+
+Sample 2:
+Input Output 8 12 ............ ....****..*. .........*.. ...**....... ............ ....**...... ........*... ****..***.** Princess Died

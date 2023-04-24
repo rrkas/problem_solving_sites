@@ -1,0 +1,33 @@
+Problem
+An array and sum of all elements of the array was stored in a hard disk. Unfortunately due to a bug some elements of the array got modified.
+Owner of the hard disk said that this issue happens with him often. He also claimed that the bug chooses any element present in the array and then multiplies all occurrences of that element in the array by -1. i.e bug chooses any element present in the array lets say X. Then the bug will replace all occurrences of X with -X. Note: if X and -X both are already present in the original array then bug will replace all occurrences of X with -X but the bug will not replace -X with X.
+Currently you have the modified array and sum of elements of the original array. You have to find out whether the claim made by the owner of the hard disk can be true or not. If the claim can be true also print the smallest possible value that came due to modification. i.e if all X were replaced with -X then print the value of -X not X. And if there can be multiple possible -X then print the minimum possible -X.
+Note: It is guaranteed that any element of the original array as well as the modified array will not be zero.
+
+
+
+Input Format
+First line contains single integer T (Number of test cases). Each test case consists of 2 lines:
+First line contains 2 integers n and sum , where n represents the number of elements in array and sum represents the sum of elements of the original array. Second line contains array of length n (modified array).
+
+
+
+Output Format
+For each test case print “NO” (without quotes) if claim made by the owner of the hard disk cannot be true. If claim made by the owner of the hard disk can be true then print “YES” (without quotes) on first line and on the second line print the number that came due to replacement. i.e print -X.
+If multiple -X are possible then print the minimum possible -X.
+
+
+
+Constraints
+1 <= T <= 10 5 1 <= n <= 10 5 −10 14 ≤sum≤10 14 −10 9 ≤array[i]≤10 9 and array[i] != 0 Sum of n over all test cases does not exceed 10 6 .
+
+
+
+Sample 1:
+Input Output 1 4 10 1 -2 3 4 YES -2
+
+
+
+Explanation:
+The modified array is : 1 -2 3 4. The original sum is 10.
+This can happen if original array was : 1 2 3 4 as its sum is 10 and then all occurrences of 2 got replaced with -2.

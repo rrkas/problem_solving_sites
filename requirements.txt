@@ -1,0 +1,14 @@
+black
+bs4
+chromedriver-autoinstaller
+fqdn
+isoduration
+jsonpointer
+jupyter
+pip-chill
+pysocks
+requests
+selenium
+tqdm
+uri-template
+webcolors
