@@ -1,0 +1,35 @@
+Problem
+Everyone knows the definition of MEX, including Jamshed. But Jamshed loves MEX, so he comes up with a new problem involving MEX every day, including today.
+Given an array of size n. You can partition the array into any number of contiguous subarrays. You need to find the maximum sum which is obtained by adding the MEX of each partitioned subarray. Each element of the given array belongs to exactly one of the subarrays.
+The MEX (minimum excluded) of an array is the smallest non-negative integer that does not belong to the array. For instance:
+The MEX of [2,2,1] is 0, because 0 does not belong to the array. The MEX of [3,1,0,1] is 2, because 0 and 1 belong to the array, but 2 does not. The MEX of [0,3,1,2] is 4 because 0, 1, 2, and 3 belong to the array, but 4 does not.
+
+
+
+Input Format
+First line contains a single integer t, denoting the number of test cases.
+Each test case contains two lines of input.
+First line contains n, representing the length of the array. Second line contains n space separated integers.
+
+
+
+Output Format
+Output the maximum sum which is obtained by adding the MEX of each partitioned subarray.
+
+
+
+Constraints
+1 <= t <= 10 3 1 <= n <= 10 3 0 <= arr[i] <= n It is guaranteed that sum of n over all testcase does not exceed 10 4 .
+
+
+
+Sample 1:
+Input Output 1 5 1 0 5 0 2 3
+
+
+
+Explanation:
+We have array as : 1 0 5 0 2
+So we divide the array in 4 different partitions i.e. [1 0] [5] [0] [2].
+So the MEX of the 4 partitions are : [1 0] -> 2 , [5] -> 0 , [0] -> 1 , [2] -> 0.
+So the sum of MEX of all partitions is : 2 + 0 + 1 + 0 => 3.

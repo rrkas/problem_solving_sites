@@ -1,0 +1,51 @@
+Problem
+You are given two arrays consisting of n integers (arr1,arr2). You need compute the value of given function f(i) for each i (1 <= i <= n)
+f(i) = max( g(i) , h(i) )
+where, g(i) represents the arr2[i] th smallest element of the i th prefix array of arr1.
+h(i) represents the arr2[i] th smallest element of the i th suffix array of arr1.
+If arr2[i] th smallest element does not exists in g(i) or h(i) then consider that element to be 0.
+Consider the arr1 = [1, 2, 3, 4] and arr2 = [1, 3, 2, 4]
+For i = 1 :
+The 1 st prefix array will be : [1] and the 1 st suffix array will be [4].
+Since arr2[i] = 1 so the 1 st smallest element from 1 st prefix array is 1 and 1 st smallest element from the 1 st suffix array is 4.
+For i = 2 :
+The 2 nd prefix array will be : [1, 2] and the 2 nd suffix array will be [3, 4].
+Since arr2[i] = 3 so the 3 rd smallest element from 2 nd prefix array is 0 (Since there exits no 3 rd smallest element) and 3 rd smallest element from the 2 nd suffix array is 0 (Since there exits no 3 rd smallest element).
+
+
+
+Input Format
+First line contains an integer n, representing the length of the array.
+Second line contains n space separated integers denoting arr1.
+Third line contains n space separated integers denoting arr2.
+
+
+
+Output Format
+Output consists of n space separated integers. Where the i th integer represents the value of function f(i) (1 <= i <= n).
+
+
+
+Constraints
+1 <= n <= 10 5 1 <= arr1[i] <= 10 6 1 <= arr2[i] <= n
+
+
+
+Sample 1:
+Input Output 5 1 4 2 5 3 1 3 2 4 5 3 0 3 5 5
+
+
+
+Explanation:
+For i = 1
+The prefix array is : [1] and the suffix array is : [3].
+The 1 st smallest element of prefix array is 1 and for suffix array it is 3.
+So f(1) = max(1 , 3) => 3.
+For i = 2
+The prefix array is : [1, 4] and the suffix array is : [5, 3].
+Here prefix array and suffix array does not contain the 3 rd smallest element so we consider them to be 0.
+So f(2) = max(0 , 0) => 0.
+For i = 3
+The prefix array is : [1, 4, 2] and the suffix array is : [2, 5, 3].
+The 2 nd smallest element of prefix array is 2 and for suffix array it is 3.
+So f(3) = max(2 , 3) => 3.
