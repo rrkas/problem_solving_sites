@@ -1,5 +1,8 @@
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
+        if numRows == 1:
+            return s
+        
         strings = [[] for _ in range(numRows)]
 
         rev = False
